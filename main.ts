@@ -198,15 +198,15 @@ namespace datamatrix {
     //%block="gen data matrix as image by $data|| ractangle mode $ract"
     //%group="image"
     //%weight=10
-    export function genimg(data:string,ract:boolean) {
+    export function genimg(data:string="",ract:boolean=false) {
         let outputnll: number[][] = datamgen(data,ract)
         let outputimg: Image = image.create(outputnll[0].length,outputnll.length)
-        let color = 0
+        let bin = 0
+        outputimg.fill(1)
         for (let y = 0;y < outputnll.length;y++) {
             for (let x = 0;x < outputnll[y].length;x++) {
-                color = outputnll[y][x]
-                outputimg.setPixel(x,y,1)
-                if (color > 1) outputimg.setPixel(x,y,15);
+                bin = outputnll[y][x]
+                if (bin > 1) outputimg.setPixel(x,y,15);
             }
         }
         return outputimg
