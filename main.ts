@@ -194,21 +194,36 @@ namespace datamatrix {
         return mat; // width and height of symbol
     }
 
+    export function stampImage(src: Image, to: Image, x: number, y: number) {
+        if (!src || !to) { return; }
+        to.drawTransparentImage(src, x, y)
+    }
+
     //%blockid=datamatrix_gendatamatriximage
-    //%block="gen data matrix as image by $data|| ractangle mode $ract"
+    //%block="gen data matrix as image by $data and gap $gap|| ractangle mode $ract"
+    //%gap.defl=4
     //%group="image"
     //%weight=10
-    export function genimg(data:string="",ract:boolean=false) {
+    export function genimg(data:string="",gap:number=4,ract:boolean=false) {
         let outputnll: number[][] = datamgen(data,ract)
-        let outputimg: Image = image.create(outputnll[0].length,outputnll.length)
+        let outputimg: Image = image.create(outputnll[0].length+1,outputnll.length)
         let bin = 0
         outputimg.fill(1)
         for (let y = 0;y < outputnll.length;y++) {
-            for (let x = 0;x < outputnll[y].length;x++) {
+            for (let x = 0;x < outputnll[y].length+1;x++) {
                 bin = outputnll[y][x]
                 if (bin > 0) outputimg.setPixel(x,y,15);
             }
         }
-        return outputimg
+        for (let y = 0;y < outputimg.height;y++) {
+            if (y % 2 > 0) outputimg.setPixel(outputimg.width-1,y,15);
+        }
+        for (let x = 0;x < outputimg.width;x++) {
+            if (x % 2 == 0) outputimg.setPixel(x,0,15);
+        }
+        let outputgap: Image = image.create(outputimg.width+(gap*2),outputimg.height+(gap*2))
+        outputgap.fill(1)
+        stampImage(outputimg,outputgap,gap,gap)
+        return outputgap
     }
 }
