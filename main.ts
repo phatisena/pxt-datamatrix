@@ -206,7 +206,7 @@ namespace datamatrix {
         for (let y = 0;y < outputnll.length;y++) {
             for (let x = 0;x < outputnll[y].length;x++) {
                 bin = outputnll[y][x]
-                if (bin > 1) outputimg.setPixel(x,y,15);
+                if (bin > 0) outputimg.setPixel(x,y,15);
             }
         }
         return outputimg
