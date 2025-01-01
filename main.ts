@@ -1,3 +1,7 @@
+namespace SpriteKind {
+    export const _datamatrix = SpriteKind.create();
+}
+
 //%block="data matrix"
 //%color="#2c48b8"
 //%icon="\uf0c8"
@@ -194,13 +198,13 @@ namespace datamatrix {
         return mat; // width and height of symbol
     }
 
-    export function stampImage(src: Image, to: Image, x: number, y: number) {
+    function stampImage(src: Image, to: Image, x: number, y: number) {
         if (!src || !to) { return; }
         to.drawTransparentImage(src, x, y)
     }
 
     //%blockid=datamatrix_gendatamatriximage
-    //%block="gen data matrix as image by $data and gap $gap|| ractangle mode $ract"
+    //%block="create DataMatrix image by $data and gap $gap|| and ractangle mode $ract"
     //%data.defl="Makecode Arcade"
     //%gap.defl=4
     //%group="image"
