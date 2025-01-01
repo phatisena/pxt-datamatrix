@@ -1,8 +1,8 @@
 
-//%block="data matrix"
+//%block="Data matrix"
 //%color="#2c48b8"
 //%icon="\uf0c8"
-namespace datamatrix {
+namespace DataMatrix {
 
     function addnumarr(cou:number) {
         let uarr: number[] = []
