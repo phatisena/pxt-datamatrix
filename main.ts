@@ -204,7 +204,7 @@ namespace datamatrix {
     }
 
     /**
-     * create data matrix image with text
+     * create data matrix image with text input and gap for quite zone
      * @param the string input to encode to datamatrix image
      * @param gap number for quite zone in data matrix image
      * @param get encode to datamatrix in ractangle mode if true
