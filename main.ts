@@ -203,7 +203,7 @@ namespace datamatrix {
         to.drawTransparentImage(src, x, y)
     }
 
-    //%blockid=datamatrix_gendatamatriximage
+    //%blockid=datamatrix_image_createdatamatrix
     //%block="create DataMatrix image by $data and gap $gap|| and ractangle mode $ract"
     //%data.defl="Makecode Arcade"
     //%gap.defl=4
