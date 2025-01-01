@@ -203,8 +203,14 @@ namespace datamatrix {
         to.drawTransparentImage(src, x, y)
     }
 
+    /**
+     * create data matrix image with text
+     * @param the string input to encode to datamatrix image
+     * @param gap number for quite zone in data matrix image
+     * @param get encode to datamatrix in ractangle mode if true
+     */
     //%blockid=datamatrix_image_createdatamatrix
-    //%block="create DataMatrix image by $data and gap $gap|| and ractangle mode $ract"
+    //%block="create DataMatrix image |by $data gap $gap|| ractangle mode $ract"
     //%data.defl="Makecode Arcade"
     //%gap.defl=4
     //%group="image"
