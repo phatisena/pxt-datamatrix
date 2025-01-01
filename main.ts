@@ -1,6 +1,3 @@
-namespace SpriteKind {
-    export const _datamatrix = SpriteKind.create();
-}
 
 //%block="data matrix"
 //%color="#2c48b8"
@@ -204,7 +201,7 @@ namespace datamatrix {
     }
 
     /**
-     * create data matrix image with text input and gap for quite zone
+     * create data matrix image with text input and gap number for quite zone level
      * @param the string input to encode to datamatrix image
      * @param gap number for quite zone in data matrix image
      * @param get encode to datamatrix in ractangle mode if true
