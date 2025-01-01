@@ -201,6 +201,7 @@ namespace datamatrix {
 
     //%blockid=datamatrix_gendatamatriximage
     //%block="gen data matrix as image by $data and gap $gap|| ractangle mode $ract"
+    //%data.defl="Makecode Arcade"
     //%gap.defl=4
     //%group="image"
     //%weight=10
