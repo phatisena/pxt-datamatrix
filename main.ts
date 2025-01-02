@@ -1,7 +1,7 @@
 
 //%block="Data matrix"
 //%color="#2c48b8"
-//%icon="\uf0c8"
+//%icon="\uf02a"
 namespace DataMatrix {
 
     function addnumarr(cou:number) {
@@ -207,7 +207,7 @@ namespace DataMatrix {
      * @param get encode to datamatrix in ractangle mode if true
      */
     //%blockid=datamatrix_image_createdatamatrix
-    //%block="create DataMatrix image |by $data gap $gap|| ractangle mode $ract"
+    //%block="create \uf02a DataMatrix image |by $data gap $gap|| ractangle mode $ract"
     //%data.defl="Makecode Arcade"
     //%gap.defl=4
     //%group="image"
