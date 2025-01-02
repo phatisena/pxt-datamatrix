@@ -209,7 +209,7 @@ namespace DataMatrix {
      */
     //%blockid=datamatrix_image_createdatamatrix
     //%block="create DataMatrix image by $data|| gap $gap ractangle mode $ract"
-    //%data.defl="HELLO-MAKECODE-ARCADE"
+    //%data.defl="MAKECODE-ARCADE"
     //%gap.defl=4
     //%group="image"
     //%weight=10
