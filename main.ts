@@ -205,10 +205,11 @@ namespace DataMatrix {
      * @param the string input to encode to datamatrix image
      * @param gap number for quite zone in data matrix image
      * @param get encode to datamatrix in ractangle mode if true
+     * @return to result by data matrix as image
      */
     //%blockid=datamatrix_image_createdatamatrix
-    //%block="create \uf02a DataMatrix image |by $data gap $gap|| ractangle mode $ract"
-    //%data.defl="Makecode Arcade"
+    //%block="create DataMatrix image by $data|| gap $gap ractangle mode $ract"
+    //%data.defl="HELLO-MAKECODE-ARCADE"
     //%gap.defl=4
     //%group="image"
     //%weight=10
