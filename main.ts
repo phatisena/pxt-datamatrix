@@ -200,6 +200,8 @@ namespace DataMatrix {
         to.drawTransparentImage(src, x, y)
     }
 
+    let inprogress = false
+
     /**
      * create data matrix image with text input and gap number for quite zone level
      * @param the string input to encode to datamatrix image
@@ -214,6 +216,8 @@ namespace DataMatrix {
     //%group="image"
     //%weight=10
     export function genimg(data:string="",gap:number=4,ract:boolean=false) {
+        if (inprogress) {return image.create(1,1)}
+        inprogress = true
         let outputnll: number[][] = datamgen(data,ract)
         let outputimg: Image = image.create(outputnll[0].length+1,outputnll.length)
         let bin = 0
@@ -233,6 +237,7 @@ namespace DataMatrix {
         let outputgap: Image = image.create(outputimg.width+(gap*2),outputimg.height+(gap*2))
         outputgap.fill(1)
         stampImage(outputimg,outputgap,gap,gap)
+        inprogress = false
         return outputgap
     }
 }
