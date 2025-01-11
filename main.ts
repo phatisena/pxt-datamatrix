@@ -204,7 +204,7 @@ namespace DataMatrix {
 
     //%blockid=datamatrix_shadow_ractboolean
     //%block="$ract"
-    //%ract.shadow="toggleYesNo"
+    //%ract.shadow=toggleRactSquare
     //%blockHidden=true
     export function _RactOrSquare(ract: boolean): boolean {
         return ract;
