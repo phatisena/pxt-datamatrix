@@ -202,14 +202,6 @@ namespace DataMatrix {
 
     let inprogress = false
 
-    //%blockid=datamatrix_shadow_ractboolean
-    //%block="$ract"
-    //%ract.shadow=toggleRactSquare
-    //%blockHidden=true
-    export function _RactOrSquare(ract: boolean): boolean {
-        return ract;
-    }
-
     /**
      * create data matrix image with text input and gap number for quite zone level
      * @param the string input to encode to datamatrix image
@@ -219,7 +211,6 @@ namespace DataMatrix {
      */
     //%blockid=datamatrix_image_createdatamatrix
     //%block="create DataMatrix image by $data|| gap $gap ractangle mode $ract"
-    //%ract.shadow=datamatrix_shadow_ractboolean
     //%data.defl="MAKECODE-ARCADE"
     //%gap.defl=4
     //%group="image"
