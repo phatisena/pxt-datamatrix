@@ -205,18 +205,18 @@ namespace DataMatrix {
     /**
      * create data matrix image with text input and gap number for quite zone level
      * @param the string input to encode to datamatrix image
-     * @param gap number for quite zone in data matrix image
      * @param get encode to datamatrix in ractangle/square on toggle
+     * @param gap number for quite zone in data matrix image
      * @return to result by data matrix as image
      */
     //%blockid=datamatrix_image_createdatamatrix
-    //%block="create DataMatrix image by $data|| gap $gap ractangle mode $ract"
+    //%block="create DataMatrix image by $data in $ract|| gap $gap"
     //%ract.shadow="toggleRactangleSquare"
     //%data.defl="MAKECODE-ARCADE"
     //%gap.defl=4
     //%group="image"
     //%weight=10
-    export function genimg(data:string="",gap:number=4,ract:boolean=false) {
+    export function genimg(data: string = "", ract: boolean,gap: number = 4) {
         if (inprogress) {return image.create(1,1)}
         inprogress = true
         let outputnll: number[][] = datamgen(data,ract)
