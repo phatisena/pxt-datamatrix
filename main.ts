@@ -213,6 +213,7 @@ namespace DataMatrix {
     //%block="create DataMatrix image by $data|| gap $gap ractangle mode $ract"
     //%data.defl="MAKECODE-ARCADE"
     //%gap.defl=4
+    //%ract.min="square" ract.max="ractangle" 
     //%group="image"
     //%weight=10
     export function genimg(data:string="",gap:number=4,ract:boolean=false) {
