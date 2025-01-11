@@ -210,7 +210,7 @@ namespace DataMatrix {
      * @return to result by data matrix as image
      */
     //%blockid=datamatrix_image_createdatamatrix
-    //%block="create DataMatrix image by $data|| gap $gap ractangle mode $ract"
+    //%block="create DataMatrix image by $data|| gap $gap ractangle mode $ract=toggleYesNo"
     //%data.defl="MAKECODE-ARCADE"
     //%gap.defl=4
     //%group="image"
